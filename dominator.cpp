@@ -3,7 +3,7 @@
 using ll = long long;
 constexpr ll NN = 2e5;
 
-//useage:
+//usage:
 //dominator::adj[u].push_back(v);
 //dominator::construct_tree(n, src);
 namespace dominator{
