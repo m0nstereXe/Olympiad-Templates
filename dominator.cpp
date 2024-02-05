@@ -30,6 +30,7 @@ namespace dominator{
     }
  
     void construct_tree(int n, int src = 0){
+        T=0;
         iota(sdom,sdom+n,0);
         iota(dsu::label,dsu::label+n,0);
         iota(dsu::par,dsu::par+n,0);
