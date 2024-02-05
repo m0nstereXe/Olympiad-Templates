@@ -45,7 +45,8 @@ namespace dominator{
                 radj[arr[j]].push_back(arr[i]);
             }
         }; dfs(src);
- 
+        n = T; //n is now only the nodes reachable from the src
+
         for(int i = n-1;i>=0;i--){
             for(int j : radj[i])
                 sdom[i] = min(sdom[i],sdom[dsu::find(j)]);
