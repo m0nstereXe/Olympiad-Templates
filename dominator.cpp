@@ -52,8 +52,9 @@ namespace dominator{
             for(int j : radj[i])
                 sdom[i] = min(sdom[i],sdom[dsu::find(j)]);
             if(i) bucket[sdom[i]].push_back(i);
- 
-            for(int v; int w : bucket[i]){
+
+            int v;
+            for(int w : bucket[i]){
                 v=dsu::find(w);
                 if(sdom[v]==sdom[w]) dom[w]=sdom[w];
                 else dom[w]=v;
